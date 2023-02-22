@@ -1,0 +1,3 @@
+[submodule "portfolio-angular"]
+  path = portfolio-angular
+  url = git://portfolio-angular/
