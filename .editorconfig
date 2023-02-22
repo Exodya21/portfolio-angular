@@ -14,7 +14,3 @@ quote_type = single
 [*.md]
 max_line_length = off
 trim_trailing_whitespace = false
-
-[submodule "portfolio-angular"]
-  path = portfolio-angular
-  url = git://portfolio-angular/
