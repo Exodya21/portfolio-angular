@@ -53,7 +53,7 @@ body {
 }
 
 .rk-header {
-  background-color: #fff;
+  background: linear-gradient(179.59deg, #000000 0.36%, rgba(20, 30, 48, 0) 75.44%);;
   position: relative;
   z-index: 5;
 }
