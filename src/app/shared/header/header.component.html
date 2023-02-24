@@ -13,18 +13,25 @@
   </label>
 
   <div class="ae-container-fluid rk-topbar">
-      <ul class="rk-menu" style="gap: 8rem;">
-        <li routerLinkActive="active" class="rk-menu__item"><a routerLink="portfolio" class="rk-menu__link">Portfolio</a>
-        </li>
-        <li routerLinkActive="active" class="rk-menu__item"><a routerLink="about" class="rk-menu__link">About</a>
-        </li>
+    <nav class="rk-navigation" style="width:100%">
+      <ul class="rk-menu" style="gap: 8rem; justify-content: center; width: 100%;">
+        <div id="links">
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="portfolio" class="rk-menu__link">My portfolio</a>
+          </li>
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="about" class="rk-menu__link">My studies</a>
+          </li>
+        </div>
+
         <a class="logoJGI" routerLink="portofolio">
           <img src="assets/img/logoJGI.png" alt="mi logo" >
         </a>
-        <li routerLinkActive="active" class="rk-menu__item"><a routerLink="item" class="rk-menu__link">Items</a>
-        </li>
-        <li class="rk-menu__item"><a href="contact.html" class="rk-menu__link">Contact Us</a>
-        </li>
+
+        <div id="links">
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="item" class="rk-menu__link">My knowledge</a>
+          </li>
+          <li class="rk-menu__item"><a href="assets/data/CV-jaume-131222-1MB.pdf" download="CV-jaume-1MB.pdf" class="rk-menu__link active">Download my CV</a>
+          </li>
+        </div>
       </ul>
       <!-- <form class="rk-search">
         <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
@@ -34,5 +41,6 @@
           </svg>
         </label>
       </form> -->
+    </nav>
   </div>
 </header>

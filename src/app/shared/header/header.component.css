@@ -5,3 +5,9 @@
 .logoJGI img {
     width: 100%;
 }
+
+#links {
+  display: flex;
+  width: 32%;
+  justify-content: space-around;
+}

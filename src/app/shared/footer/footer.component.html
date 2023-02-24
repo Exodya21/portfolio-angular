@@ -1,17 +1,23 @@
-<footer class="ae-container-fluid rk-footer " style="position:sticky; bottom: 0;">
+<footer class="ae-container-fluid rk-footer " >
+  <!-- style="position:sticky; bottom: 0;" -->
   <div class="ae-grid ae-grid--collapse">
     <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
       <ul class="rk-menu rk-footer-menu">
-        <li routerLinkActive="active" class="rk-menu__item"><a routerLink="about" class="rk-menu__link">About</a>
+        <li routerLinkActive="active" class="rk-menu__item"><a routerLink="portfolio" class="rk-menu__link">My portfolio</a>
         </li>
-        <li routerLinkActive="active" class="rk-menu__item"><a routerLink="item" class="rk-menu__link">Items</a>
+        <li routerLinkActive="active" class="rk-menu__item"><a routerLink="item" class="rk-menu__link">My studies</a>
         </li>
-        <li routerLinkActive="active" class="rk-menu__item"><a routerLink="terminos" class="rk-menu__link">Terminos</a>
+        <li routerLinkActive="active" class="rk-menu__item"><a routerLink="terminos" class="rk-menu__link">My knowledge</a>
         </li>
       </ul>
       <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">{{ year }} ANGULAR PORTFOLIO </span>All Right Reserved.</p>
     </div>
-    <div class="ae-grid__item item-lg-4 au-xs-ta-center">
+    <div class="ae-grid__item item-lg-4 au-xs-ta-center" style="align-items: center; display: flex; justify-content: center;">
+      <a href="portfolio" target="_blank" class="rk-social-btn " style="width:2.3rem; height:2.3rem;">
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#icon-whatsapp"></use>
+        </svg>
+      </a>
       <a href={{_servicio.info.github}} target="_blank" class="rk-social-btn " style="width:2rem; height:2rem;">
         <svg >
           <use xlink:href="assets/img/symbols.svg#icon-github"></use>
@@ -21,7 +27,13 @@
         <svg>
           <use xlink:href="assets/img/symbols.svg#icon-linkedin"></use>
         </svg>
-      </a><!--<a href="#0" class="rk-social-btn ">
+      </a>
+      <a href="portfolio" target="_blank" class="rk-social-btn " style="width:2.7rem; height:2.7rem;">
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#icon-gmail"></use>
+        </svg>
+      </a>
+      <!--<a href="#0" class="rk-social-btn ">
         <svg>
           <use xlink:href="assets/img/symbols.svg#icon-pinterest"></use>
         </svg></a><a href="#0" class="rk-social-btn ">
