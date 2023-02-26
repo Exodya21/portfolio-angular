@@ -11,6 +11,7 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ItemComponent } from './pages/item/item.component';
 import { TerminosComponent } from './pages/terminos/terminos.component';
 import { MyselfComponent } from './components/myself/myself.component';
+import { PresentationComponent } from './components/presentation/presentation.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MyselfComponent } from './components/myself/myself.component';
     ItemComponent,
     TerminosComponent,
     MyselfComponent,
+    PresentationComponent,
   ],
   imports: [
     BrowserModule,

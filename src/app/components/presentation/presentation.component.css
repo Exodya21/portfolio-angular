@@ -1,0 +1,67 @@
+.presentation {
+    margin-top: 5rem;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+}
+
+.presentation h3 {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.presentation #description {
+    text-align: justify;
+    width: 60%;
+}
+@media (max-width: 550px) {
+    .presentation p {
+        text-align: justify;
+        width: 95%;
+    }
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-top: 5rem;
+}
+
+.column:nth-child(even){
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+}
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        width: 90%;
+    }
+    .column:nth-child(even){
+        border-top: 1px solid red;
+        border-bottom: 1px solid red;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+.column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+}
