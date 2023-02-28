@@ -1,0 +1,25 @@
+{
+  "profesions": [
+    {
+      "img": "imgDesigner.png",
+      "profesion": "Designer",
+      "description": "I value simple content structure, clean design patterns, and thoughtful interactions.",
+      "enjoy": "UX, UI, Web, Apps, Logos",
+      "tools": ["Figma", "Webflow", "Ilustrator", "Canva", "Pen & Paper"]
+    },
+    {
+      "img": "imgFronEnd.png",
+      "profesion": "Front-End",
+      "description": "I value simple content structure, clean design patterns, and thoughtful interactions.",
+      "enjoy": "Consum API's, animations, compose elements & Agile.",
+      "tools": ["Visual Studio Code", "Git", "GitHub", "Trello", "npm", "json", "HTML", "CSS", "JavaScript", "React.js", "Bootstrap"]
+    },
+    {
+      "img": "imgBack-End.png",
+      "profesion": "Back-End",
+      "description": "I value SOLID structure, clean code, and testing.",
+      "enjoy": "APIrest, MVC, Services, Deployd, DB",
+      "tools": ["Java", "php", "Python", "SpringBoot", "Laravel", "Xamp", "MySQL", "Docker", "PosrgresSQL", "Postman", "Terminal"]
+    }
+  ]
+}
