@@ -1,13 +1,13 @@
 <header class="ae-container-fluid ae-container-fluid--full rk-header " style="position: sticky; top: 0;">
   <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
   <label for="mobile-menu">
-    <svg>
+    <svg style="box-shadow: 0 0 15px black;" >
       <use xlink:href="assets/img/symbols.svg#bar"></use>
     </svg>
     <svg>
       <use xlink:href="assets/img/symbols.svg#bar"></use>
     </svg>
-    <svg>
+    <svg style="box-shadow: 0 0 35px black;" >
       <use xlink:href="assets/img/symbols.svg#bar"></use>
     </svg>
   </label>
@@ -22,8 +22,8 @@
           </li>
         </div>
 
-        <a class="logoJGI" routerLink="portofolio">
-          <img src="assets/img/logoJGI.png" alt="mi logo" >
+        <a class="logoJGI" href="#up">
+          <img [src]= _DB.infoGeneral.logo alt="mi logo" >
         </a>
 
         <div id="links">

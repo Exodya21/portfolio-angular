@@ -7,7 +7,10 @@ import { InfoPaginaService } from 'src/app/services/info-pagina.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor( public _servicio: InfoPaginaService ) {
+  constructor( public _DB: InfoPaginaService ) {
+    console.log(_DB);
 
   }
+
+
 }

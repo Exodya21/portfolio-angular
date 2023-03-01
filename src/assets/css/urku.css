@@ -1985,6 +1985,7 @@ body {
 }
 .rk-menu__item.active {
   color: white;
+  text-shadow: 0 0 15px #00000099;
 }
 .rk-menu__link {
   padding-bottom: 4.2rem;

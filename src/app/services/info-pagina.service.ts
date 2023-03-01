@@ -1,36 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { InfoPagina } from '../interfaces/info-paginas.interface';
+import { InfoPage } from '../interfaces/infoPage.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InfoPaginaService {
 
-  uriInfo: string = 'assets/data/data-pagina.json';
   uriItems: string = 'assets/data/data-items.json';
-  uriAbout: string = 'https://db-portfolio-angular-default-rtdb.europe-west1.firebasedatabase.app/.json';
+  uriData: string = 'https://db-portfolio-angular-default-rtdb.europe-west1.firebasedatabase.app';
 
-  info: InfoPagina = {};
   itemsList: any = {};
-  equipo: any = {};
+  infoGeneral: InfoPage = {};
 
   isLoaded = false;
 
   constructor( private http: HttpClient ) {
-    this.getInfo()
     this.getItems()
-    this.getAbout()
-  }
-
-  private getInfo() {
-    this.http
-      .get(this.uriInfo)
-      .subscribe( (res) => {
-        this.isLoaded = true;
-        this.info = res;
-        console.log(res);
-      } )
+    this.get_InfoGeneral()
   }
 
   private getItems() {
@@ -43,12 +30,16 @@ export class InfoPaginaService {
       } )
   }
 
-  private getAbout() {
+  private uriGeneral( endpoint: string ) {
+    return `${this.uriData}${endpoint}.json`
+  }
+
+  private get_InfoGeneral() {
     this.http
-      .get(this.uriAbout)
+      .get( this.uriGeneral('/infoPage') )
       .subscribe( (res) => {
         this.isLoaded = true;
-        this.equipo = res;
+        this.infoGeneral = res;
         console.log(res);
       } )
   }

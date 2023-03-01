@@ -1,7 +1,30 @@
 {
+  "infoPage": {
+    "logo": "assets/img/logoJGI.png",
+    "title": "Portfolio Angular",
+    "email": "jaumegomiciai@gmail.com",
+    "whatsapp": "https://api.whatsapp.com/send?phone=34657302774&text=Hola%20vengo%20de%20visitar%20tu%20portfolio%20(^_^)",
+    "github": "https://github.com/exodya21",
+    "linkedin": "https://linkedin.com/in/jaume-gi",
+    "gmail": "mailto:jaumegomiciai@gmail.com?subject=## Solicitud de contacto ##&body=Hola he visto tu portafolio y me gustaria ponerme en contacto contigo.",
+    "cv": "assets/data/CV-jaume-131222-1MB.pdf"
+  },
+
+  "description": {
+    "title": "Mid Fullstack Web Developer & Designer",
+    "subtitle": "I work to live and I don't live to work, though schedule It is also my entertainment.",
+    "myself": "https://firebasestorage.googleapis.com/v0/b/db-portfolio-angular.appspot.com/o/myselfSVG.png?alt=media&token=87feaa8b-62d2-40e4-ae00-2018c8a99fd2",
+    "myselfAlt": "myself-jgi",
+    "imgDecoration": "/assets/img/tag.png",
+    "imgDecorationAlt": "imgDecoration",
+    "title2": "Hi, I'm Jaume. Nice to meet you.",
+    "descriptionContent": "I always work looking to improve myself and with a high quality standard. I divide and identify each problem or situation, understanding its parts to finally arrive at the appropriate answer. I am committed to my goals and act responsibly and coherently with them. I take my share of the blame when work doesn't go ahead. I have the ability to work efficiently without constant supervision and I also plan, encourage, help and cooperate so that my team can do their best based on my vision. I like to work in a team and also apply agile methodologies such as SCRUM or pair-programming."
+  },
+
   "profesions": [
     {
       "img": "imgDesigner.png",
+      "alt": "imgDesigner",
       "profesion": "Designer",
       "description": "I value simple content structure, clean design patterns, and thoughtful interactions.",
       "enjoy": "UX, UI, Web, Apps, Logos",
@@ -9,6 +32,7 @@
     },
     {
       "img": "imgFronEnd.png",
+      "alt": "imgFront-End",
       "profesion": "Front-End",
       "description": "I value simple content structure, clean design patterns, and thoughtful interactions.",
       "enjoy": "Consum API's, animations, compose elements & Agile.",
@@ -16,6 +40,7 @@
     },
     {
       "img": "imgBack-End.png",
+      "alt": "imgBack-End",
       "profesion": "Back-End",
       "description": "I value SOLID structure, clean code, and testing.",
       "enjoy": "APIrest, MVC, Services, Deployd, DB",
