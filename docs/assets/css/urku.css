@@ -1974,8 +1974,8 @@ body {
 .rk-menu__item {
   color: #a0a0a0;
   display: inherit;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .rk-menu__item:first-child {
   padding-left: 0;
@@ -1989,6 +1989,7 @@ body {
 }
 .rk-menu__link {
   padding-bottom: 4.2rem;
+  inline-size: max-content;
 }
 .rk-menu__sub {
   background-color: white;

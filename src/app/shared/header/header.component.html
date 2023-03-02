@@ -1,5 +1,5 @@
 <header class="ae-container-fluid ae-container-fluid--full rk-header " style="position: sticky; top: 0;">
-  <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+  <input type="checkbox" id="mobile-menu" class="rk-mobile-menu" (change)="onChange($event)">
   <label for="mobile-menu">
     <svg style="box-shadow: 0 0 15px black;" >
       <use xlink:href="assets/img/symbols.svg#bar"></use>
@@ -16,21 +16,21 @@
     <nav class="rk-navigation" style="width:100%">
       <ul class="rk-menu" style="gap: 8rem; justify-content: center; width: 100%;">
         <div id="links">
-          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="portfolio" class="rk-menu__link">My portfolio</a>
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="portfolio" class="rk-menu__link" (click)="close()">My portfolio</a>
           </li>
-          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="about" class="rk-menu__link">My studies</a>
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="about" class="rk-menu__link" (click)="close()">My studies</a>
           </li>
         </div>
 
-        <a class="logoJGI" href="#up">
+        <a class="logoJGI" href="#up" (click)="close()">
           <!-- <img [src]= _DB.infoGeneral.logo alt="mi logo" > -->
           <img src="assets/img/logoJGI_v2.png" alt="mi logo" >
         </a>
 
         <div id="links">
-          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="item" class="rk-menu__link">My knowledge</a>
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="item" class="rk-menu__link" (click)="close()">My knowledge</a>
           </li>
-          <li class="rk-menu__item"><a [href]="_DB.infoGeneral.cv" download="CV-jaume-1MB.pdf" target="_blankñ" class="rk-menu__link active">Download my CV</a>
+          <li class="rk-menu__item"><a [href]="_DB.infoGeneral.cv" download="CV-jaume-1MB.pdf" target="_blankñ" class="rk-menu__link active" (click)="close()">Download my CV</a>
           </li>
         </div>
       </ul>
