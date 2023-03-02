@@ -7,7 +7,5 @@ import { InfoPaginaService } from 'src/app/services/info-pagina.service';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent {
-  constructor( public _servicio: InfoPaginaService) {
-    // console.log(_servicio);
-  }
+  constructor( public _DB: InfoPaginaService) {}
 }

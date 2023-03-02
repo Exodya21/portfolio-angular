@@ -23,13 +23,14 @@
         </div>
 
         <a class="logoJGI" href="#up">
-          <img [src]= _DB.infoGeneral.logo alt="mi logo" >
+          <!-- <img [src]= _DB.infoGeneral.logo alt="mi logo" > -->
+          <img src="assets/img/logoJGI_v2.png" alt="mi logo" >
         </a>
 
         <div id="links">
           <li routerLinkActive="active" class="rk-menu__item"><a routerLink="item" class="rk-menu__link">My knowledge</a>
           </li>
-          <li class="rk-menu__item"><a href="assets/data/CV-jaume-131222-1MB.pdf" download="CV-jaume-1MB.pdf" class="rk-menu__link active">Download my CV</a>
+          <li class="rk-menu__item"><a [href]="_DB.infoGeneral.cv" download="CV-jaume-1MB.pdf" target="_blankñ" class="rk-menu__link active">Download my CV</a>
           </li>
         </div>
       </ul>

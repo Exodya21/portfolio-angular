@@ -10,25 +10,26 @@
         <li routerLinkActive="active" class="rk-menu__item"><a routerLink="terminos" class="rk-menu__link">My knowledge</a>
         </li>
       </ul>
-      <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">{{ year }} ANGULAR PORTFOLIO </span>All Right Reserved.</p>
+      <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">{{ year }} {{_DB.infoGeneral.title | uppercase }} </span>All Right Reserved.</p>
     </div>
+
     <div class="ae-grid__item item-lg-4 au-xs-ta-center" style="align-items: center; display: flex; justify-content: center;">
-      <a href="https://api.whatsapp.com/send?phone=34657302774&text=Hola%20vengo%20de%20tu%20portfolio%20(^_^)" target="_blank" class="rk-social-btn " style="width:2.3rem; height:2.3rem;">
+      <a [href]="_DB.infoGeneral.whatsapp" target="_blank" class="rk-social-btn " style="width:2.3rem; height:2.3rem;">
         <svg>
           <use xlink:href="assets/img/symbols.svg#icon-whatsapp"></use>
         </svg>
       </a>
-      <a href={{_servicio.infoGeneral.github}} target="_blank" class="rk-social-btn " style="width:2rem; height:2rem;">
+      <a [href]="_DB.infoGeneral.github" target="_blank" class="rk-social-btn " style="width:2rem; height:2rem;">
         <svg >
           <use xlink:href="assets/img/symbols.svg#icon-github"></use>
         </svg>
       </a>
-      <a [href]=_servicio.infoGeneral.linkedin target="_blank" class="rk-social-btn " style="width:2rem; height:2rem;">
+      <a [href]="_DB.infoGeneral.linkedin" target="_blank" class="rk-social-btn " style="width:2rem; height:2rem;">
         <svg>
           <use xlink:href="assets/img/symbols.svg#icon-linkedin"></use>
         </svg>
       </a>
-      <a href="mailto:jaumegomiciai@gmail.com?subject=## Solicitud de contacto ##&body=Hola he visto tu portafolio y me gustaria ponerme en contacto contigo." class="rk-social-btn " style="width:2.7rem; height:2.7rem;">
+      <a [href]="_DB.infoGeneral.gmail" class="rk-social-btn " style="width:2.7rem; height:2.7rem;">
         <svg>
           <use xlink:href="assets/img/symbols.svg#icon-gmail"></use>
         </svg>
@@ -41,8 +42,9 @@
           <use xlink:href="assets/img/symbols.svg#icon-tumblr"></use>
         </svg></a> -->
     </div>
+    
     <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
-      <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="mailto:jaumegomiciai@gmail.com?subject=## Solicitud de contacto ##&body=Hola he visto tu portafolio y me gustaria ponerme en contacto contigo." class="rk-dark-color ">{{_servicio.infoGeneral.email}}</a></span></p>
+      <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a [href]="_DB.infoGeneral.gmail" class="rk-dark-color ">{{_DB.infoGeneral.email}}</a></span></p>
       <p class="rk-footer__text rk-footer__by">Theme by <a href="http://pixeden.com" class="ae-u-bolder">Pixeden.</a></p>
     </div>
   </div>

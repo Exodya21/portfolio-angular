@@ -9,5 +9,5 @@ import { InfoPaginaService } from 'src/app/services/info-pagina.service';
 export class FooterComponent {
   year: number = new Date().getFullYear();
 
-  constructor( public _servicio: InfoPaginaService){}
+  constructor( public _DB: InfoPaginaService){}
 }

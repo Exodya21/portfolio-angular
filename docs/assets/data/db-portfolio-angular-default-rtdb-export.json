@@ -1,0 +1,31 @@
+{
+  "equip": [
+    {
+      "frase": "Cosa sque add ef aef aef aef aefmkresak fle nfjean gue nb",
+      "img": "https://firebasestorage.googleapis.com/v0/b/db-portfolio-angular.appspot.com/o/team-1.jpg?alt=media&token=a8295e9c-2884-4a72-9480-ec1c2b8f00c0",
+      "nombre": "Jaume",
+      "titulo": " Formador web",
+      "twitter": "@wadjfl"
+    },
+    {
+      "frase": "Cosa con aepleo eplpda,eomf akeo",
+      "img": "https://firebasestorage.googleapis.com/v0/b/db-portfolio-angular.appspot.com/o/team-2.jpg?alt=media&token=8c3bb559-e7e7-42d0-a3ac-2f65fa4fea90",
+      "nombre": "Pol",
+      "titulo": "Fomra wa",
+      "twitter": "@polll"
+    },
+    {
+      "frase": "cosa de lam ae meteee",
+      "img": "https://firebasestorage.googleapis.com/v0/b/db-portfolio-angular.appspot.com/o/team-3.jpg?alt=media&token=0b305c7d-1bb7-4a55-b958-e4dd253393a5",
+      "nombre": "Max",
+      "titulo": "El argentino",
+      "twitter": "@mateeee"
+    }
+  ],
+  "examen": {
+    "ej15": {
+      "img": "https://firebasestorage.googleapis.com/v0/b/db-portfolio-angular.appspot.com/o/myselfSVG.png?alt=media&token=87feaa8b-62d2-40e4-ae00-2018c8a99fd2",
+      "texto": "Soy Jaume."
+    }
+  }
+}

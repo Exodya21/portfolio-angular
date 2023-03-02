@@ -53,9 +53,14 @@ body {
 }
 
 .rk-header {
-  background: linear-gradient(179.59deg, #000000 0.36%, rgba(20, 30, 48, 0) 75.44%);;
+  background: linear-gradient(180deg, #0b101a 34.36%, rgba(20, 30, 48, 0) 95%);
   position: relative;
   z-index: 5;
+}
+@media(max-width: 1025px){
+  .rk-header {
+    background: linear-gradient(180deg, #000000 0.36%, rgba(20, 30, 48, 0) 75.44%);
+  }
 }
 .top-fixed .rk-header {
   position: fixed;
@@ -1980,6 +1985,7 @@ body {
 }
 .rk-menu__item.active {
   color: white;
+  text-shadow: 0 0 15px #00000099;
 }
 .rk-menu__link {
   padding-bottom: 4.2rem;

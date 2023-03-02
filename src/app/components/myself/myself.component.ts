@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InfoPaginaService } from 'src/app/services/info-pagina.service';
 
 @Component({
   selector: 'app-myself',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./myself.component.css']
 })
 export class MyselfComponent {
-
+  constructor( public _DB: InfoPaginaService ) {}
 }

@@ -1,26 +1,24 @@
 <section class="presentation">
-    <img src="/assets/img/tag.png" alt="TagDecorations">
+    <img [src]="_DB.description.imgDecoration" [alt]="_DB.description.imgDecorationAlt">
 
-    <h3>Hi, I'm Jaume. Nice to meet you.</h3>
-    <p id="description">I always work looking to improve myself and with a high quality standard. I divide and identify each problem or situation, understanding its parts to finally arrive at the appropriate answer. I am committed to my goals and act responsibly and coherently with them. I take my share of the blame when work doesn't go ahead. I have the ability to work efficiently without constant supervision and I also plan, encourage, help and cooperate so that my team can do their best based on my vision. I like to work in a team and also apply agile methodologies such as SCRUM or pair-programming.
-    </p>
+    <h3>{{_DB.description.title2}}</h3>
+    <p id="description">{{_DB.description.descriptionContent}}</p>
 
     <div class="box" >
-        <div class="column">
+        <div *ngFor="let profesion of _DB.profesions" class="column">
             <div>
-              <img src="/assets/img/designer.png" alt="imgDesigner">
+              <img [src]="profesion.img" [alt]="profesion.alt">
             </div>
-            <h1>Designer</h1>
-            <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+            <h1>{{profesion.profesion}}</h1>
+            <p>{{profesion.description}}</p>
             <p style="color:red">Things I enjoy designing:</p>
-            <p>UX, UI, Web, Apps, Logos</p>
-            <p style="color:red">Design Tools:</p>
+            <p>{{profesion.enjoy}}</p>
+            <p style="color:red">DevTools:</p>
             <ul>
-                <li>Figma</li>
-                <li>Webflow</li>
+                <li *ngFor="let tool of profesion.tools" >{{tool}}</li>
             </ul>
         </div>
-        <div class="column">
+        <!-- <div class="column">
           <div>
             <img src="/assets/img/front-end.png" alt="imgDesigner">
           </div>
@@ -47,6 +45,6 @@
               <li>Figma</li>
               <li>Webflow</li>
           </ul>
-      </div>
+        </div> -->
     </div>
 </section>
