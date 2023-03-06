@@ -7,9 +7,9 @@ import { InfoPaginaService } from './services/info-pagina.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'portfolio-angular';
 
-  constructor( public infoPaginaService: InfoPaginaService) {
+  constructor( public _DB: InfoPaginaService) {
 
   }
+
 }
