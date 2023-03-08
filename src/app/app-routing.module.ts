@@ -7,8 +7,8 @@ import { TerminosComponent } from './pages/terminos/terminos.component';
 
 const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
-  // { path: 'about', component: AboutComponent },
-  // { path: 'item', component: ItemComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'item', component: ItemComponent },
   // { path: 'terminos', component: TerminosComponent },
   { path: '**', pathMatch:'full', redirectTo:'portfolio' },
 
