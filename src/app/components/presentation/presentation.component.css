@@ -22,7 +22,10 @@
 @media (max-width: 550px) {
     .presentation #description {
         text-align: justify;
-        width: 95%;
+        width: 85%;
+    }
+    .presentation h3 {
+      width: 90%;
     }
 }
 
@@ -139,4 +142,18 @@
 ul, li {
     list-style: none;
     padding: 0;
+}
+
+@media (max-width: 575px) {
+  #imgDecoration {
+    width: 70%;
+  }
+  .column {
+    width: 100%;
+    padding: 1rem 0 0 0!important;
+  }
+  .column p {
+    width: 80%;
+  }
+
 }
