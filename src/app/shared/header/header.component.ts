@@ -12,7 +12,7 @@ import { InfoPaginaService } from 'src/app/services/info-pagina.service';
 export class HeaderComponent {
   constructor( public _DB: InfoPaginaService ) {}
 
-  isChecked: any;
+  isChecked?: any;
 
   public onChange(event: any): void {
     // this.isChecked = event.target['checked'];
@@ -20,6 +20,8 @@ export class HeaderComponent {
   }
 
   public close() {
-    this.isChecked = this.isChecked.target['checked'] = false;
+    try {
+      this.isChecked = this.isChecked.target['checked'] = false;
+    } catch (error) { console.warn( 'Desktop Responsive', error) }
   }
 }

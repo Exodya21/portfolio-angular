@@ -52,6 +52,8 @@
     width: 95%;
     animation: typing 3s steps(92),
     cursor 0.75s step-start infinite;
+    -webkit-animation: typing 3s steps(92),
+    cursor 0.75s step-start infinite;
   }
 }
 

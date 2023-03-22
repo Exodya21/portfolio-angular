@@ -1,0 +1,55 @@
+.projects {
+  /* display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
+  gap: 2rem; */
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.project {
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center;
+  gap: 1rem; */
+}
+
+.project header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.titleProject {
+  width: fit-content;
+}
+
+.date {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.project div {
+  display: flex;
+  flex-direction: row-reverse;
+
+  gap: 2rem;
+
+}
+
+.project div video {
+  width: 35%;
+}
+
+.project div p {
+  text-align: justify;
+
+  width: 100%;
+
+  margin: 0;
+}

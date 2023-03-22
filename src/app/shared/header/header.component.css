@@ -11,3 +11,9 @@
   width: 32%;
   justify-content: space-around;
 }
+
+@media (orientation: landscape) {
+  .rk-menu {
+    flex-direction: row!important;
+  }
+}
