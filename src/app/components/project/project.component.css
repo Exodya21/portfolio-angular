@@ -1,0 +1,62 @@
+.project {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 1rem;
+}
+
+.project_title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project_title h4 {
+  display: inline;
+  margin: 0;
+}
+
+.project_title img {
+  width: 3rem;
+}
+
+.project_video {
+  margin: 1rem 0;
+}
+
+.project_devTools div {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap
+}
+
+.project_description {
+  margin: 1rem 0;
+}
+
+.btns_readMore {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  width: 100%;
+}
+
+.btn_readMore {
+  color: white;
+  background-color: transparent;
+  border: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.readMore:hover {
+  color: gray;
+}
+
+.btns_readMore button hr {
+  margin: 0;
+  color: white;
+  width: 100%;
+}

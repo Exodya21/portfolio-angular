@@ -1,0 +1,40 @@
+<section class="project">
+  <div class="project_title">
+    <h4>Game-web :</h4>
+    <img src="assets/img/github-icon-project.svg" alt="github link">
+  </div>
+
+  <video class="project_video" width="100%" height="100%" controls>
+    <source src="https://firebasestorage.googleapis.com/v0/b/db-portfolio-angular.appspot.com/o/UnownsTraductor.mp4?alt=media&token=e9c9bde3-9dc8-49c1-bf84-90b565c029d4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="project_devTools">
+    <h5>Dev tools :</h5>
+    <div>
+      <img src="assets/img/javascript-icon.svg" alt="js-icon">
+      <img src="assets/img/javascript-icon.svg" alt="js-icon">
+      <img src="assets/img/javascript-icon.svg" alt="js-icon">
+      <img src="assets/img/javascript-icon.svg" alt="js-icon">
+      <img src="assets/img/javascript-icon.svg" alt="js-icon">
+      <img src="assets/img/javascript-icon.svg" alt="js-icon">
+      <img src="assets/img/javascript-icon.svg" alt="js-icon">
+      <img src="assets/img/javascript-icon.svg" alt="js-icon">
+      <img src="assets/img/javascript-icon.svg" alt="js-icon">
+    </div>
+  </div>
+
+  <div class="project_description">
+    <h5>Description :</h5>
+    <p>a ewfd af ef aefawesdc dw awdwsd awd awdasd awd d</p>
+
+    <div [class]=fade *ngIf="element == true">
+      <p>paijgpirjgiegiamgi mairm ikga ikpaikm gika ikik amrp pk asd awd da aewofd aoiefjkmepoifapikmf piamefip apiaemfpikmafmapewfpmaf, aoefm </p>
+    </div>
+
+    <div class="btns_readMore">
+      <button *ngIf="element == false" [class]=back (click)="showData()">Read more ... <hr></button>
+      <button *ngIf="element == true" [class]=back (click)="hideData()">Read less <hr></button>
+    </div>
+  </div>
+</section>
