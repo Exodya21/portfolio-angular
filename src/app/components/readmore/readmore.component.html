@@ -1,0 +1,13 @@
+<div class="project_description">
+  <h5>Description :</h5>
+  <p>{{parraf_show}}</p>
+
+  <div [class]=fade *ngIf="element == true">
+    <p>{{parraf_hidden}}</p>
+  </div>
+
+  <div class="btns_readMore">
+    <button *ngIf="element == false" [class]=back (click)="showData()">Read more ... <hr></button>
+    <button *ngIf="element == true" [class]=back (click)="hideData()">Read less <hr></button>
+  </div>
+</div>

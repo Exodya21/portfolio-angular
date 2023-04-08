@@ -1,5 +1,5 @@
 .logoJGI {
-    width: 4%;
+    width: 6%;
 }
 
 .logoJGI img {
@@ -15,5 +15,11 @@
 @media (orientation: landscape) {
   .rk-menu {
     flex-direction: row!important;
+  }
+}
+
+@media (min-width:1200px) {
+  .logoJGI {
+    width: 5.5%;
   }
 }

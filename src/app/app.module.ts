@@ -14,6 +14,8 @@ import { MyselfComponent } from './components/myself/myself.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
 import { MyProjectsComponent } from './pages/myprojects/myprojects.component';
 import { ProjectComponent } from './components/project/project.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { ReadmoreComponent } from './components/readmore/readmore.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { ProjectComponent } from './components/project/project.component';
     PresentationComponent,
     MyProjectsComponent,
     ProjectComponent,
+    NotfoundComponent,
+    ReadmoreComponent,
   ],
   imports: [
     BrowserModule,

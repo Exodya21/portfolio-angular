@@ -17,6 +17,8 @@ export class InfoPaginaService {
   infoGeneral: InfoPage = {};
   description: InfoDescription = {};
   profesions: any = [];
+  projects: any = [];
+  projects_name: any = [];
 
   isLoaded = false;
 
@@ -25,6 +27,7 @@ export class InfoPaginaService {
     this.get_InfoGeneral()
     this.get_InfoDescription()
     this.get_InfoProfesions()
+    this.get_InfoProjects()
   }
 
   private getItems() {
@@ -68,6 +71,24 @@ export class InfoPaginaService {
         this.isLoaded = true;
         this.profesions = res;
         console.log(res);
+      } )
+  }
+
+  private get_InfoProjects() {
+    this.http
+      .get( this.uriGeneral('/projects') )
+      .subscribe( (res) => {
+        this.isLoaded = true;
+        this.projects = res;
+
+        this.projects.forEach( (project: any) => {
+          // console.log( project.project_name )
+          this.projects_name.push( project.project_name )
+        });
+
+        console.log(res);
+        console.log(this.projects_name);
+
       } )
   }
 }

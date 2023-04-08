@@ -18,17 +18,17 @@
         <div id="links">
           <li routerLinkActive="active" class="rk-menu__item"><a routerLink="portfolio" class="rk-menu__link" (click)="close()" >My portfolio</a>
           </li>
-          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="about" class="rk-menu__link" (click)="close()">My studies</a>
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="myprojects" class="rk-menu__link" (click)="close()">My projects</a>
           </li>
         </div>
 
-        <a class="logoJGI" href="#up" (click)="close()">
+        <a class="logoJGI" href="#top" (click)="close()">
           <!-- <img [src]= _DB.infoGeneral.logo alt="mi logo" > -->
-          <img  src="assets/img/logoJGI_v2.png" alt="mi logo"  >
+          <img  src="assets/img/icons/logoJGI_icon.svg" alt="mi logo"  >
         </a>
 
         <div id="links">
-          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="myprojects" class="rk-menu__link" (click)="close()">My projects</a>
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="about" class="rk-menu__link" (click)="close()">My studies</a>
           </li>
           <li class="rk-menu__item"><a [href]="_DB.infoGeneral.cv" download="CV-jaume-1MB.pdf" target="_blank" class="rk-menu__link active" (click)="close()" >Download my CV</a>
           </li>

@@ -1,12 +1,21 @@
 <section  style="display:flex; align-items: start; color: white;">
-
-  <div class="projects animate__animated animate__fadeIn">
+  <div class="projects animate__animated animate__fadeIn animate__slower animate__delay-1s">
 
     <h2>My projects</h2>
+    <ul [class]=fade *ngIf="element == true" >
+      <li *ngFor="let project_name of _DB.projects_name" class="shortcut">
+        <a [href]="id_shortcuts(project_name)">{{project_name}}</a>
+      </li>
+    </ul>
+
+    <div class="btns_readMore">
+      <button *ngIf="element == false" [class]=back (click)="showData()">Check my projects</button>
+      <button *ngIf="element == true" [class]=back (click)="hideData()">Read less</button>
+    </div>
 
     <app-project></app-project>
-    <app-project></app-project>
+    <!-- <app-project></app-project>
+    <app-project></app-project> -->
 
   </div>
-
 </section>

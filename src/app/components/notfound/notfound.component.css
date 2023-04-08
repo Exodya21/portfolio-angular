@@ -1,0 +1,30 @@
+.container_notfound {
+  text-align: center;
+  color: white;
+
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_notfound p {
+  font-size: 10rem;
+}
+
+.btn_readMore {
+  color: white;
+  background-color: transparent;
+
+  padding: 0.7rem 1rem;
+  margin: 0;
+
+  border: 1px solid red;
+  box-shadow: 0px 4px 30px rgba(255, 0, 0, 0.25);
+  border-radius: 7px;
+}
+
+.btn_readMore:hover {
+  color: gray;
+}
