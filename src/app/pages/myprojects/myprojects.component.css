@@ -55,3 +55,15 @@
   color: gray;
 }
 
+.contactame {
+  width: 100%;
+  text-align: end;
+  margin-top: 2rem;
+  position: sticky;
+  bottom: 3rem;
+}
+
+.contactame a img {
+  width: 2.5rem;
+  z-index: 199;
+}

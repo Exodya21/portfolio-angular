@@ -81,6 +81,8 @@ export class InfoPaginaService {
         this.isLoaded = true;
         this.projects = res;
 
+        this.projects.reverse()
+
         this.projects.forEach( (project: any) => {
           // console.log( project.project_name )
           this.projects_name.push( project.project_name )
