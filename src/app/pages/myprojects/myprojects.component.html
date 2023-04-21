@@ -1,5 +1,5 @@
 <section  style="display:flex; align-items: start; color: white;">
-  <div class="projects animate__animated animate__fadeIn animate__slower animate__delay-1s">
+  <div class="projects animate__animated animate__fadeIn animate__slower ">
 
     <h2>My projects</h2>
     <ul [class]=fade *ngIf="element == true" >
@@ -13,13 +13,11 @@
       <button *ngIf="element == true" [class]=back (click)="hideData()">Read less</button>
     </div>
 
-    <app-project></app-project>
-    <!-- <app-project></app-project>
-    <app-project></app-project> -->
+    <app-projects-list />
 
     <div class="contactame" >
       <a href="#footer" >
-          <img src="assets/img/icons/down.svg" alt="down">
+        <img src="assets/img/icons/down.svg" alt="down">
       </a>
     </div>
   </div>

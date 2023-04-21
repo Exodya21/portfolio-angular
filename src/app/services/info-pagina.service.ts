@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { InfoPage } from '../interfaces/infoPage.interface';
 import { InfoDescription } from '../interfaces/infoDescription.interface';
@@ -22,7 +23,12 @@ export class InfoPaginaService {
 
   isLoaded = false;
 
-  constructor( private http: HttpClient ) {
+  listOfProjects: any = []
+
+  constructor(
+      private http: HttpClient,
+      private route: ActivatedRoute
+    ) {
     this.getItems()
     this.get_InfoGeneral()
     this.get_InfoDescription()
@@ -30,13 +36,14 @@ export class InfoPaginaService {
     this.get_InfoProjects()
   }
 
+
   private getItems() {
     this.http
       .get(this.uriItems)
       .subscribe( (res) => {
         this.isLoaded = true;
         this.itemsList = res;
-        console.log(res);
+        // console.log(res);
       } )
   }
 
@@ -50,7 +57,7 @@ export class InfoPaginaService {
       .subscribe( (res) => {
         this.isLoaded = true;
         this.infoGeneral = res;
-        console.log(res);
+        // console.log(res);
       } )
   }
 
@@ -60,7 +67,7 @@ export class InfoPaginaService {
       .subscribe( (res) => {
         this.isLoaded = true;
         this.description = res;
-        console.log(res);
+        // console.log(res);
       } )
   }
 
@@ -70,7 +77,7 @@ export class InfoPaginaService {
       .subscribe( (res) => {
         this.isLoaded = true;
         this.profesions = res;
-        console.log(res);
+        // console.log(res);
       } )
   }
 
@@ -81,15 +88,21 @@ export class InfoPaginaService {
         this.isLoaded = true;
         this.projects = res;
 
-        this.projects.reverse()
+        // this.projects.reverse()
 
-        this.projects.forEach( (project: any) => {
-          // console.log( project.project_name )
-          this.projects_name.push( project.project_name )
-        });
+        // this.projects.forEach( (project: any) => {
+        //   // console.log( project.project_name )
+        //   this.projects_name.push( project.project_name )
+        // });
+
+        Object.values(res).forEach( (project: any) => {
+          this.listOfProjects.push( { project_name : project.project_name, project_img : project.project_img} )
+        })
 
         console.log(res);
-        console.log(this.projects_name);
+        console.log(this.projects['Game_web']);
+        console.log(this.listOfProjects);
+        // console.log(this.projects_name);
 
       } )
   }

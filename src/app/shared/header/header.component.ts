@@ -22,6 +22,6 @@ export class HeaderComponent {
   public close() {
     try {
       this.isChecked = this.isChecked.target['checked'] = false;
-    } catch (error) { console.warn( 'Desktop Responsive', error) }
+    } catch (error) { console.warn( 'Desktop Responsive' ) }
   }
 }

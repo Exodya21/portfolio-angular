@@ -1,39 +1,42 @@
-<div *ngFor="let project of _DB.projects" [id]="project.project_name">
-  <div class="span_shortcut"></div>
-  <section class="project">
-    <div class="project_title" >
-      <h3>{{project.project_name}} :</h3>
+<section class="project animate__animated animate__fadeIn animate__slower ">
+  <div class="project_title" >
+    <h3>{{dataProject?.project_name}} :</h3>
+    <div>
+      <a [href]="dataProject?.github_link" target="_blank" >
+        <img src="assets/img/icons/github-icon-project.svg" alt="github link">
+      </a>
+    </div>
+  </div>
+
+  <div class="project_responsive">
+    <!-- <video *ngIf="project.video_link?.length > 0" class="project_video" width="100%" height="100%" controls>
+      <source [src]="project.video_link" type="video/mp4">
+      Your browser does not support the video tag.
+    </video> -->
+
+    <img *ngIf="dataProject?.video_link?.length > 0" [src]="dataProject?.video_link" [alt]="dataProject?.project_name" class="project_video" >
+    <img *ngIf="dataProject?.video_link?.length === 0" [src]="dataProject?.project_img" [alt]="dataProject?.project_name" class="project_video">
+
+    <div class="project_devTools">
+      <h5>Dev tools :</h5>
       <div>
-        <a [href]="project.github_link" target="_blank" >
-          <img src="assets/img/icons/github-icon-project.svg" alt="github link">
-        </a>
+        <img *ngFor="let dev_tool of dataProject?.dev_tools" src="assets/img/devtools/{{dev_tool}}.svg" [alt]="dev_tool">
       </div>
-    </div>
 
-    <div class="project_responsive">
+      <h5>Project start : {{dataProject?.project_start}}</h5>
 
-      <!-- <video *ngIf="project.video_link?.length > 0" class="project_video" width="100%" height="100%" controls>
-        <source [src]="project.video_link" type="video/mp4">
-        Your browser does not support the video tag.
-      </video> -->
-
-      <img *ngIf="project.video_link?.length > 0" [src]="project.video_link" [alt]="project.project_name" class="project_video" >
-
-      <img *ngIf="project.video_link?.length === 0" [src]="project.project_img" [alt]="project.project_name" class="project_video">
-
-      <div class="project_devTools">
-        <h5>Dev tools :</h5>
-        <div>
-          <img *ngFor="let dev_tool of project.dev_tools" src="assets/img/devtools/{{dev_tool}}.svg" [alt]="dev_tool">
+      <marquee *ngIf="dataProject?.deployd" direction="left" >
+        <div class="animate__animated animate__pulse animate__infinite	infinite animate__delay-3s animate__fast" >
+          <a class="deployd_link " [href]="dataProject?.deployd_link" target="_blank"> {{dataProject?.deployd}} (click me) </a>
+          {{dataProject?.project_state}}
         </div>
-
-        <h5>Project start : {{project.project_start}}</h5>
-        <marquee direction="left">{{project.project_state}}</marquee>
-      </div>
-
+      </marquee>
+      <marquee *ngIf="!dataProject?.deployd" direction="left">
+        {{dataProject?.project_state}}
+      </marquee>
     </div>
+  </div>
 
-    <app-readmore parraf_show="{{project.parraf_show}}" parraf_hidden="{{project.parraf_hidden}}" ></app-readmore>
+  <app-readmore parraf_show="{{dataProject?.parraf_show}}" parraf_hidden="{{dataProject?.parraf_hidden}}" ></app-readmore>
 
-  </section>
-</div>
+</section>

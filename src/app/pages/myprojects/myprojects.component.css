@@ -67,3 +67,9 @@
   width: 2.5rem;
   z-index: 199;
 }
+
+@media (orientation:landscape) and (max-height:436px) {
+  .contactame {
+    display: none!important;
+  }
+}
