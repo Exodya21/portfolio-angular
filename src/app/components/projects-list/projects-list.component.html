@@ -1,9 +1,23 @@
-<div  class="container_project_list">
-  <div *ngFor="let project of _DB.listOfProjects">
+<div class="container_project_list animate__animated animate__fadeIn animate__slower">
+  <div *ngFor="let project of projects">
 
     <a [routerLink]="['/myprojects', project.project_name]" class="project_preview">
       <h3>{{project.project_name}}</h3>
       <img [src]="project.project_img" [alt]="project.project_name">
+      <div class="rol_work">
+        <label class="tooltip" data-info="Designer">
+          <img *ngIf="project.project_rol.designer" class="designer" src="/assets/img/icons/designer.png" alt="">
+          <img *ngIf="!project.project_rol.designer" class="designer blackwhite" src="/assets/img/icons/designer.png" alt="">
+        </label>
+        <label class="tooltip" data-info="Fronted">
+          <img *ngIf="project.project_rol.frontend" src="/assets/img/icons/front-end.png" alt="">
+          <img *ngIf="!project.project_rol.frontend" class="blackwhite" src="/assets/img/icons/front-end.png" alt="">
+        </label>
+        <label class="tooltip" data-info="Backend">
+          <img *ngIf="project.project_rol.backend" class="backend " src="/assets/img/icons/back-end.png" alt="">
+          <img *ngIf="!project.project_rol.backend" class="backend blackwhite" src="/assets/img/icons/back-end.png" alt="">
+        </label>
+      </div>
     </a>
 
   </div>

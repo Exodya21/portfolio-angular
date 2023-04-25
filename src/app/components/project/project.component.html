@@ -34,6 +34,21 @@
       <marquee *ngIf="!dataProject?.deployd" direction="left">
         {{dataProject?.project_state}}
       </marquee>
+
+      <div class="rol_work">
+        <label class="tooltip" data-info="Designer">
+          <img *ngIf="dataProject.rol.designer" class="designer" src="/assets/img/icons/designer.png" alt="">
+          <img *ngIf="!dataProject.rol.designer" class="designer blackwhite" src="/assets/img/icons/designer.png" alt="">
+        </label>
+        <label class="tooltip" data-info="Fronted">
+          <img *ngIf="dataProject.rol.frontend" src="/assets/img/icons/front-end.png" alt="">
+          <img *ngIf="!dataProject.rol.frontend" class="blackwhite" src="/assets/img/icons/front-end.png" alt="">
+        </label>
+        <label class="tooltip" data-info="Backend">
+          <img *ngIf="dataProject.rol.backend" class="backend " src="/assets/img/icons/back-end.png" alt="">
+          <img *ngIf="!dataProject.rol.backend" class="backend blackwhite" src="/assets/img/icons/back-end.png" alt="">
+        </label>
+      </div>
     </div>
   </div>
 

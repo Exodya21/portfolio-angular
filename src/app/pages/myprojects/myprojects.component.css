@@ -11,10 +11,26 @@
 }
 
 .projects h2 {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
-.shortcuts {
+.filters {
+  width: 90%;
+  padding: 0;
+  margin-top: 0;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.filters div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* .shortcuts {
   margin: 0 1rem 1rem;
   padding: 0;
 
@@ -22,11 +38,69 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-}
+} */
 
 .shortcut {
-  display: inline;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
   list-style: none;
+
+  text-align: center;
+  /* width: 20%; */
+  width: auto;
+
+  cursor: pointer;
+}
+
+
+
+.shortcut p {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  /* inline-size: max-content; */
+
+  font-size: 0.9rem;
+
+  /* word-break: break-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; */
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.5px;
+  bottom: 0;
+  left: 0;
+
+  background-color: rgb(255, 0, 0);
+  border: 1px solid rgba(255, 0, 0, 0.25);
+  border-radius: 5px;
+  /* box-shadow: 0px 4px 30px rgba(223, 177, 177, 0.25); */
+  box-shadow: -1px 1px 10px rgb(197, 21, 21);
+
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .btns_readMore {
@@ -71,5 +145,58 @@
 @media (orientation:landscape) and (max-height:436px) {
   .contactame {
     display: none!important;
+  }
+}
+
+@media (min-width:385px) {
+  .filters {
+    flex-direction: row;
+  }
+
+  #midFilter {
+    inline-size: max-content;
+  }
+}
+
+@media (min-width:650px) {
+  .filters {
+    width: 80%;
+  }
+}
+
+@media (min-width:768px) {
+  .shortcut p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:900px) {
+  .filters {
+    width: 70%;
+  }
+}
+
+@media (min-width:1024px) {
+  .filters {
+    width: 90%;
+  }
+
+  .filters div {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    width: 40%;
+  }
+}
+
+@media (min-width:1200px) {
+  .filters {
+    width: 80%;
+  }
+}
+
+@media (min-width:1240px) {
+  .filters {
+    width: 70%;
   }
 }

@@ -96,7 +96,16 @@ export class InfoPaginaService {
         // });
 
         Object.values(res).forEach( (project: any) => {
-          this.listOfProjects.push( { project_name : project.project_name, project_img : project.project_img} )
+          this.listOfProjects.push(
+            {
+              project_name : project.project_name,
+              project_id : project.id,
+              project_img : project.project_img,
+              project_state : project.project_state.includes('💻') ? 'In work in progress' : 'In production',
+              project_count_devTools : project.dev_tools.length,
+              project_rol : project.rol
+            }
+          )
         })
 
         console.log(res);

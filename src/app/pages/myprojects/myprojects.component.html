@@ -2,18 +2,29 @@
   <div class="projects animate__animated animate__fadeIn animate__slower ">
 
     <h2>My projects</h2>
-    <ul [class]=fade *ngIf="element == true" >
-      <li *ngFor="let project_name of _DB.projects_name" class="shortcut">
-        <a [href]="id_shortcuts(project_name)">{{project_name}}</a>
-      </li>
+    <ul [class]='filterClass' *ngIf="element == true" >
+      <!-- <li *ngFor="let project of _DB.listOfProjects" class="shortcut">
+        <a [href]="id_shortcuts(project.project_name)">{{project.project_name}}</a>
+      </li> -->
+      <div>
+        <li class="shortcut" (click)="filterByCurrentProjects()"><p class="hover-underline-animation">Current projects</p></li>
+        <li class="shortcut" (click)="filterByDoneProjects()"><p class="hover-underline-animation">Done projects</p></li>
+      </div>
+      <li id="midFilter" class="shortcut" style="align-items: center;" (click)="filterByDevTools()"><p class="hover-underline-animation" >With + DevTools</p></li>
+      <div>
+        <li class="shortcut" (click)="filterByCodeInProgress()"><p class="hover-underline-animation">Code in progress</p></li>
+        <li class="shortcut" (click)="filterByInProduction()"><p class="hover-underline-animation">In production</p></li>
+      </div>
     </ul>
 
     <div class="btns_readMore">
-      <button *ngIf="element == false" [class]=back (click)="showData()">Check my projects</button>
-      <button *ngIf="element == true" [class]=back (click)="hideData()">Read less</button>
+      <button *ngIf="element == false" [class]=back (click)="showData()">Show filters</button>
+      <button *ngIf="element == true" [class]=back (click)="hideData()">Hide filters</button>
     </div>
 
-    <app-projects-list />
+    <!-- <h1>{{filtredListOfPreviewProject}}</h1> -->
+
+    <app-projects-list [projects]="listOfProjects" />
 
     <div class="contactame" >
       <a href="#footer" >

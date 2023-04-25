@@ -29,7 +29,7 @@ export class ProjectComponent {
     if ( !sessionStorage.getItem(`${this.idProject}`) )
       sessionStorage.setItem(`${this.idProject}`, JSON.stringify(this.dataProject))
 
-    console.log(this.dataProject);
+    // console.log(this.dataProject);
   }
 
 }
