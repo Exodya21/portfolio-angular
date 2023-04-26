@@ -6,16 +6,16 @@
       <img [src]="project.project_img" [alt]="project.project_name">
       <div class="rol_work">
         <label class="tooltip" data-info="Designer">
-          <img *ngIf="project.project_rol.designer" class="designer" src="/assets/img/icons/designer.png" alt="">
-          <img *ngIf="!project.project_rol.designer" class="designer blackwhite" src="/assets/img/icons/designer.png" alt="">
+          <img *ngIf="project.project_rol.designer" class="designer" src="assets/img/icons/designer.png" alt="a">
+          <img *ngIf="!project.project_rol.designer" class="designer blackwhite" src="assets/img/icons/designer.png" alt="b">
         </label>
         <label class="tooltip" data-info="Fronted">
-          <img *ngIf="project.project_rol.frontend" src="/assets/img/icons/front-end.png" alt="">
-          <img *ngIf="!project.project_rol.frontend" class="blackwhite" src="/assets/img/icons/front-end.png" alt="">
+          <img *ngIf="project.project_rol.frontend" src="assets/img/icons/front-end.png" alt="a">
+          <img *ngIf="!project.project_rol.frontend" class="blackwhite" src="assets/img/icons/front-end.png" alt="b">
         </label>
         <label class="tooltip" data-info="Backend">
-          <img *ngIf="project.project_rol.backend" class="backend " src="/assets/img/icons/back-end.png" alt="">
-          <img *ngIf="!project.project_rol.backend" class="backend blackwhite" src="/assets/img/icons/back-end.png" alt="">
+          <img *ngIf="project.project_rol.backend" class="backend " src="assets/img/icons/back-end.png" alt="a">
+          <img *ngIf="!project.project_rol.backend" class="backend blackwhite" src="assets/img/icons/back-end.png" alt="b">
         </label>
       </div>
     </a>
