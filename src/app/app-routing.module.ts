@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'myprojects/**', component: NotfoundComponent },
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo: "/portfolio", pathMatch: "full"},
-  // { path: '**', component: NotfoundComponent},
+  // { path: '#/', pathMatch: "full", component: NotfoundComponent},
 ];
 
 @NgModule({

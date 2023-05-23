@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { InfoPaginaService } from 'src/app/services/info-pagina.service';
@@ -14,7 +15,11 @@ export class ProjectComponent {
   idProject :any
   dataProject :any = {}
 
+  isLoaded = false;
+
+
   constructor (
+    private http: HttpClient,
     public _DB: InfoPaginaService,
     private route: ActivatedRoute
     // private router: Router,
@@ -24,12 +29,30 @@ export class ProjectComponent {
 
     this.dataProject = sessionStorage.getItem(`${this.idProject}`)
       ? JSON.parse(sessionStorage.getItem(`${this.idProject}`) || '{}')
-      : _DB.projects[`${this.idProject}`] || 'a';
+      // : this._DB.projects[`${this.idProject}`] || this.project;
+      : this.get_Project();
+
 
     if ( !sessionStorage.getItem(`${this.idProject}`) )
       sessionStorage.setItem(`${this.idProject}`, JSON.stringify(this.dataProject))
 
-    // console.log(this.dataProject);
+    console.log(this.dataProject);
+    console.log(this.idProject);
+    console.log(_DB.listOfProjects);
+
+
+
+  }
+
+  private get_Project() {
+    this.http
+      .get(`https://db-portfolio-angular-default-rtdb.europe-west1.firebasedatabase.app/projects/${this.idProject}.json`)
+      .subscribe( (res) => {
+        this.isLoaded = true;
+        this.dataProject = res;
+
+        console.log(this.dataProject);
+      } )
   }
 
 }
