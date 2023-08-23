@@ -1,21 +1,23 @@
 <div class="container_project_list animate__animated animate__fadeIn animate__slower">
-  <div *ngFor="let project of projects">
+  <div *ngFor="let project of projects" class="card">
 
     <a [routerLink]="['/myprojects', project.project_name]" class="project_preview">
       <h3>{{project.project_name}}</h3>
-      <img [src]="project.project_img" [alt]="project.project_name">
+
+      <img [src]="project.project_img" [alt]="project.project_name" class="background">
+
       <div class="rol_work">
         <label class="tooltip" data-info="Designer">
-          <img *ngIf="project.project_rol.designer" class="designer" src="assets/img/icons/designer.png" alt="a">
-          <img *ngIf="!project.project_rol.designer" class="designer blackwhite" src="assets/img/icons/designer.png" alt="b">
+          <img *ngIf="project.project_rol.designer" class="designer" src="assets/img/icons/designer.png" alt="designer">
+          <img *ngIf="!project.project_rol.designer" class="designer blackwhite" src="assets/img/icons/designer.png" alt="designer-icon">
         </label>
         <label class="tooltip" data-info="Fronted">
-          <img *ngIf="project.project_rol.frontend" src="assets/img/icons/front-end.png" alt="a">
-          <img *ngIf="!project.project_rol.frontend" class="blackwhite" src="assets/img/icons/front-end.png" alt="b">
+          <img *ngIf="project.project_rol.frontend" src="assets/img/icons/front-end.png" alt="frontend">
+          <img *ngIf="!project.project_rol.frontend" class="blackwhite" src="assets/img/icons/front-end.png" alt="frontend-icon">
         </label>
         <label class="tooltip" data-info="Backend">
-          <img *ngIf="project.project_rol.backend" class="backend " src="assets/img/icons/back-end.png" alt="a">
-          <img *ngIf="!project.project_rol.backend" class="backend blackwhite" src="assets/img/icons/back-end.png" alt="b">
+          <img *ngIf="project.project_rol.backend" class="backend" src="assets/img/icons/back-end.png" alt="backend">
+          <img *ngIf="!project.project_rol.backend" class="backend blackwhite" src="assets/img/icons/back-end.png" alt="backend-icon">
         </label>
       </div>
     </a>

@@ -16,12 +16,12 @@
 }
 
 .presentation #description {
-    text-align: justify;
+    text-align: center;
     width: 60%;
 }
 @media (max-width: 550px) {
     .presentation #description {
-        text-align: justify;
+        text-align: center;
         width: 85%;
     }
     .presentation h3 {
