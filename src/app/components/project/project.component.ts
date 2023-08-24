@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { InfoPaginaService } from 'src/app/services/info-pagina.service';
+import { SlideInterface } from '../carrussel/slide.interface';
 
 @Component({
   selector: 'app-project',
@@ -14,6 +15,14 @@ export class ProjectComponent {
 
   idProject :any
   dataProject :any = {}
+
+  slides: SlideInterface[] = [
+    { url: 'assets/img/projects/dombom-1.webp', title: 'beach', milisegs: 10000 }, // img preview
+    { url: 'assets/img/projects/app_for_food-1.webp', title: 'boat', milisegs: 11000 },
+    { url: 'assets/img/projects/death_note-1.webp', title: 'forest', milisegs: 12000 },
+    { url: 'assets/img/projects/byte_consultorio-1.webp', title: 'city', milisegs: 13000  },
+    { url: 'assets/img/projects/the_meeting_point_repository-1.webp', title: 'italy', milisegs: 14000 },
+  ];
 
   isLoaded = false;
 
@@ -39,11 +48,11 @@ export class ProjectComponent {
     // }
 
 
-    console.log(this.idProject);
+    // console.log(this.idProject);
 
-    console.log(this.dataProject);
-    console.log(_DB.projects_list);
-    console.log(_DB.projects_list_preview);
+    // console.log(this.dataProject);
+    // console.log(_DB.projects_list);
+    // console.log(_DB.projects_list_preview);
 
 
     // console.log(sessionStorage.getItem(`${this.idProject}`));
@@ -56,7 +65,7 @@ export class ProjectComponent {
         this.isLoaded = true;
         this.dataProject = res;
 
-        console.log(this.dataProject);
+        // console.log(this.dataProject);
       } )
   }
 

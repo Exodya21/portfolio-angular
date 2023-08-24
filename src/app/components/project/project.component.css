@@ -46,13 +46,19 @@
   transform: scale(1.2);
 }
 
-.project_video {
-  margin: 1rem 0;
+#project_video {
+  border-radius: 5px;
 
   width: 100%;
+  height: 50%;
+  margin: 0 auto;
 
-  border-radius: 5px;
-  /* border: 1px solid black; */
+  position: relative;
+}
+.project_devTools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project_devTools div {
@@ -175,7 +181,7 @@
     font-size: 1.75em;
   }
 
-  .project_video {
+  #project_video {
     width: 50%;
   }
 
@@ -191,6 +197,12 @@
 
   .span_shortcut {
     height: 8rem;
+  }
+}
+
+@media (min-width:1125px) {
+  #project_video {
+    height: 40%;
   }
 }
 
