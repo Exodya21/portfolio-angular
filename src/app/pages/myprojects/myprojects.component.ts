@@ -17,11 +17,11 @@ export class MyProjectsComponent {
   constructor(public _DB: InfoPaginaService) {
   }
 
-  listOfProjects = this._DB.listOfProjects
+  projects_list_preview = this._DB.projects_list_preview
 
 
   filterByCurrentProjects() {
-    this.listOfProjects = this._DB.listOfProjects.sort(function (a :any, b :any) {
+    this.projects_list_preview = this._DB.projects_list_preview.sort(function (a :any, b :any) {
       if (a.project_id < b.project_id) {
         return 1;
       }
@@ -33,7 +33,7 @@ export class MyProjectsComponent {
     });
   }
   filterByDoneProjects() {
-    this.listOfProjects = this._DB.listOfProjects.sort(function (a :any, b :any) {
+    this.projects_list_preview = this._DB.projects_list_preview.sort(function (a :any, b :any) {
       if (a.project_id > b.project_id) {
         return 1;
       }
@@ -45,7 +45,7 @@ export class MyProjectsComponent {
     });
   }
   filterByDevTools() {
-    this.listOfProjects = this._DB.listOfProjects.sort(function (a :any, b :any) {
+    this.projects_list_preview = this._DB.projects_list_preview.sort(function (a :any, b :any) {
       if (a.project_count_devTools < b.project_count_devTools) {
         return 1;
       }
@@ -59,12 +59,12 @@ export class MyProjectsComponent {
   filterByCodeInProgress() {
     this.filterByCurrentProjects()
 
-    this.listOfProjects = this._DB.listOfProjects.filter((project :any) => project.project_state !== "In production")
+    this.projects_list_preview = this._DB.projects_list_preview.filter((project :any) => project.project_state !== "In production")
   }
   filterByInProduction() {
     this.filterByCurrentProjects()
 
-    this.listOfProjects = this._DB.listOfProjects.filter((project :any) => project.project_state === "In production")
+    this.projects_list_preview = this._DB.projects_list_preview.filter((project :any) => project.project_state === "In production")
   }
 
 

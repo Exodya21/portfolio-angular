@@ -23,7 +23,8 @@ export class InfoPaginaService {
 
   isLoaded = false;
 
-  listOfProjects: any = []
+  projects_list: any = []
+  projects_list_preview: any = []
 
   constructor(
       private http: HttpClient,
@@ -95,25 +96,38 @@ export class InfoPaginaService {
         //   this.projects_name.push( project.project_name )
         // });
 
-        Object.values(res).forEach( (project: any) => {
-          this.listOfProjects.push(
-            {
-              project_name : project.project_name,
-              project_id : project.id,
-              project_img : project.project_img,
-              project_state : project.project_state.includes('💻') ? 'In work in progress' : 'In production',
-              project_count_devTools : project.dev_tools.length,
-              project_rol : project.rol
-            }
-          )
-        })
+      this.projects_list = Object.values(res)
 
-        console.log(res);
-        console.log(this.projects['Game_web']);
-        console.log(this.listOfProjects);
-        // console.log(this.projects_name);
-
+      this.projects_list.sort( (a :any, b :any) => {
+        if (a.id > b.id) {
+          return 1;
+        }
+        if (a.id < b.id) {
+          return -1;
+        }
+        // a must be equal to b
+        return 0;
       } )
+
+      this.projects_list.forEach( (project: any) => {
+        this.projects_list_preview.push(
+          {
+            project_name : project.project_name,
+            project_id : project.id,
+            project_img : project.project_img,
+            project_state : project.project_state.includes('💻') ? 'In work in progress' : 'In production',
+            project_count_devTools : project.dev_tools.length,
+            project_rol : project.rol
+          }
+        )
+      })
+
+
+
+      console.log(this.projects_list_preview);
+      // console.log(this.projects_name);
+
+    } )
   }
 
 

@@ -26,22 +26,27 @@ export class ProjectComponent {
   ) {
     // this.router.navigate(['/myprojects', 'a']);
     this.idProject = this.route.snapshot.paramMap.get("id");
+    this.get_Project();
 
-    this.dataProject = sessionStorage.getItem(`${this.idProject}`)
-      ? JSON.parse(sessionStorage.getItem(`${this.idProject}`) || '{}')
-      // : this._DB.projects[`${this.idProject}`] || this.project;
-      : this.get_Project();
+    // this.dataProject = sessionStorage.getItem(`${this.idProject}`)
+    //   ? JSON.parse(sessionStorage.getItem(`${this.idProject}`) || '{}')
+    //   // : this._DB.projects[`${this.idProject}`] || this.project;
+    //   : this.get_Project();
 
 
-    if ( !sessionStorage.getItem(`${this.idProject}`) )
-      sessionStorage.setItem(`${this.idProject}`, JSON.stringify(this.dataProject))
+    // if ( !sessionStorage.getItem(`${this.idProject}`) ) {
+    //   sessionStorage.setItem(`${this.idProject}`, JSON.stringify(this.dataProject))
+    // }
+
+
+    console.log(this.idProject);
 
     console.log(this.dataProject);
-    console.log(this.idProject);
-    console.log(_DB.listOfProjects);
+    console.log(_DB.projects_list);
+    console.log(_DB.projects_list_preview);
 
 
-
+    // console.log(sessionStorage.getItem(`${this.idProject}`));
   }
 
   private get_Project() {

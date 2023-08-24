@@ -2,8 +2,9 @@
   <div class="projects animate__animated animate__fadeIn animate__slower ">
 
     <h2>My projects</h2>
+
     <ul [class]='filterClass' *ngIf="element == true" >
-      <!-- <li *ngFor="let project of _DB.listOfProjects" class="shortcut">
+      <!-- <li *ngFor="let project of _DB.projects_list_preview" class="shortcut">
         <a [href]="id_shortcuts(project.project_name)">{{project.project_name}}</a>
       </li> -->
       <div>
@@ -24,7 +25,7 @@
 
     <!-- <h1>{{filtredListOfPreviewProject}}</h1> -->
 
-    <app-projects-list [projects]="listOfProjects" />
+    <app-projects-list [projects]="projects_list_preview" />
 
     <div class="contactame" >
       <a href="#footer" >
