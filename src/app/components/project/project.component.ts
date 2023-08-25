@@ -16,13 +16,23 @@ export class ProjectComponent {
   idProject :any
   dataProject :any = {}
 
-  slides: SlideInterface[] = [
+  // slides: SlideInterface[] = [
+  //   { url: 'assets/img/projects/dombom-1.webp', title: 'beach', milisegs: 8000 }, // img preview
+  //   { url: 'assets/img/projects/app_for_food-1.webp', title: 'boat', milisegs: 10000 },
+  //   { url: 'assets/img/projects/death_note-1.webp', title: 'forest', milisegs: 12000 },
+  //   { url: 'assets/img/projects/byte_consultorio-1.webp', title: 'city', milisegs: 13000  },
+  //   { url: 'assets/img/projects/the_meeting_point_repository-1.webp', title: 'italy', milisegs: 14000 },
+  // ];
+
+  slides: SlideInterface[] = []
+  auxiliar_slides : SlideInterface[] = [
     { url: 'assets/img/projects/dombom-1.webp', title: 'beach', milisegs: 8000 }, // img preview
     { url: 'assets/img/projects/app_for_food-1.webp', title: 'boat', milisegs: 10000 },
     { url: 'assets/img/projects/death_note-1.webp', title: 'forest', milisegs: 12000 },
     { url: 'assets/img/projects/byte_consultorio-1.webp', title: 'city', milisegs: 13000  },
     { url: 'assets/img/projects/the_meeting_point_repository-1.webp', title: 'italy', milisegs: 14000 },
   ];
+
 
   isLoaded = false;
 
@@ -33,7 +43,7 @@ export class ProjectComponent {
     private route: ActivatedRoute
     // private router: Router,
   ) {
-    // this.router.navigate(['/myprojects', 'a']);
+    // this.router.navigate(['/myprojects', 'a']); -> darle valor al param
     this.idProject = this.route.snapshot.paramMap.get("id");
     this.get_Project();
 
@@ -64,6 +74,7 @@ export class ProjectComponent {
       .subscribe( (res) => {
         this.isLoaded = true;
         this.dataProject = res;
+        this.slides = this.dataProject.carrusel ? this.dataProject.carrusel : this.auxiliar_slides ;
 
         console.log(this.dataProject);
       } )
