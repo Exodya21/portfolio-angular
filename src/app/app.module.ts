@@ -18,6 +18,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { ReadmoreComponent } from './components/readmore/readmore.component';
 import { ProjectsListComponent } from './components/projects-list/projects-list.component';
 import { CarrusselComponent } from './components/carrussel/carrussel.component';
+import { RolWorkerComponent } from './components/rol-worker/rol-worker.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CarrusselComponent } from './components/carrussel/carrussel.component';
     ReadmoreComponent,
     ProjectsListComponent,
     CarrusselComponent,
+    RolWorkerComponent,
   ],
   imports: [
     BrowserModule,

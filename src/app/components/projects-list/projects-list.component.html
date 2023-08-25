@@ -6,7 +6,12 @@
 
       <img [src]="project.project_img" [alt]="project.project_name" class="background">
 
-      <div class="rol_work">
+      <app-rol-worker
+        [rols_list]="project.project_rol"
+        rol_styles="{{'rol_work'}}">
+      </app-rol-worker>
+
+      <!-- <div class="rol_work">
         <label class="tooltip" data-info="Designer">
           <img *ngIf="project.project_rol.designer" class="designer" src="assets/img/icons/designer.png" alt="designer">
           <img *ngIf="!project.project_rol.designer" class="designer blackwhite" src="assets/img/icons/designer.png" alt="designer-icon">
@@ -19,7 +24,7 @@
           <img *ngIf="project.project_rol.backend" class="backend" src="assets/img/icons/back-end.png" alt="backend">
           <img *ngIf="!project.project_rol.backend" class="backend blackwhite" src="assets/img/icons/back-end.png" alt="backend-icon">
         </label>
-      </div>
+      </div> -->
     </a>
 
   </div>

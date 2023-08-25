@@ -36,6 +36,13 @@
 
       <h5>Project start : {{dataProject?.project_start}}</h5>
 
+      <div class="rol">
+        <app-rol-worker
+          [rols_list]="dataProject.rol"
+          rol_styles="{{'rol_worker_project'}}">
+        </app-rol-worker>
+      </div>
+
       <marquee *ngIf="dataProject?.deployd" direction="left" >
         <div class="animate__animated animate__pulse animate__infinite	infinite animate__delay-3s animate__fast" >
           <a class="deployd_link " [href]="dataProject?.deployd_link" target="_blank"> {{dataProject?.deployd}} (click me) </a>
@@ -45,6 +52,7 @@
       <marquee *ngIf="!dataProject?.deployd" direction="left">
         {{dataProject?.project_state}}
       </marquee>
+
 
       <!-- <div class="rol_work">
         <label class="tooltip" data-info="Designer">

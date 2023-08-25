@@ -1,0 +1,14 @@
+<div [class]=rol_styles>
+  <label class="tooltip" data-info="Designer">
+    <img *ngIf="rols_list?.designer" class="designer" src="assets/img/icons/designer.png" alt="designer">
+    <img *ngIf="!rols_list?.designer" class="designer blackwhite" src="assets/img/icons/designer.png" alt="designer-icon">
+  </label>
+  <label class="tooltip" data-info="Fronted">
+    <img *ngIf="rols_list?.frontend" src="assets/img/icons/front-end.png" alt="frontend">
+    <img *ngIf="!rols_list?.frontend" class="blackwhite" src="assets/img/icons/front-end.png" alt="frontend-icon">
+  </label>
+  <label class="tooltip" data-info="Backend">
+    <img *ngIf="rols_list?.backend" class="backend" src="assets/img/icons/back-end.png" alt="backend">
+    <img *ngIf="!rols_list?.backend" class="backend blackwhite" src="assets/img/icons/back-end.png" alt="backend-icon">
+  </label>
+</div>

@@ -11,4 +11,5 @@ export class ProjectsListComponent {
   @Input () projects :any;
 
   constructor ( public _DB :InfoPaginaService) {}
+
 }
